@@ -1,0 +1,51 @@
+# RBAC权限系统Python依赖包
+# 安装命令: pip install -r requirements.txt
+
+# 核心依赖
+bcrypt>=3.2.0                    # 密码加密
+PyMySQL>=1.0.2                   # MySQL数据库连接
+
+# 测试数据生成
+Faker>=18.0.0                    # 虚假数据生成
+tqdm>=4.64.0                     # 进度条显示
+
+# 性能测试
+threading>=1.0                   # 多线程支持（内置库）
+concurrent.futures>=3.1.1        # 并发执行（内置库）
+time>=1.0                        # 时间测量（内置库）
+
+# 配置和日志
+PyYAML>=6.0                      # YAML配置文件
+colorlog>=6.7.0                  # 彩色日志输出
+
+# 数据处理
+pandas>=1.5.0                    # 数据分析和处理
+numpy>=1.24.0                    # 数值计算
+
+# 报告生成
+jinja2>=3.1.0                    # HTML模板引擎
+matplotlib>=3.6.0                # 图表生成
+seaborn>=0.12.0                  # 统计图表
+
+# 命令行工具
+click>=8.1.0                     # 命令行参数解析
+python-dotenv>=1.0.0             # 环境变量管理
+
+# 时间处理
+python-dateutil>=2.8.0           # 日期时间处理
+
+# 可选依赖（开发和调试用）
+memory-profiler>=0.60.0          # 内存分析
+psutil>=5.9.0                    # 系统资源监控
+pytest>=7.0.0                    # 单元测试框架
+
+# 新增依赖（业务逻辑层和接口层开发）
+fastapi>=0.116.0                 # Web框架
+uvicorn>=0.35.0                  # ASGI服务器
+python-jose[cryptography]>=3.5.0 # JWT处理
+python-multipart>=0.0.20         # 文件上传支持
+pydantic>=2.11.0                 # 数据验证和序列化
+pydantic-settings>=2.10.0        # Pydantic配置管理
+python-dotenv>=1.1.0             # 环境变量管理
+bcrypt>=4.0.0                    # 密码加密（补充）
+pymysql>=1.1.0                   # MySQL连接器（补充）

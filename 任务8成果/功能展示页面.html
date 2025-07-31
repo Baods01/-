@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBAC权限管理系统 - 实际功能演示</title>
+    <!-- Element Plus CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-plus@2.4.4/dist/index.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+        }
+        .demo-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .demo-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .demo-section {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 8px;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .login-demo {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #303133;
+            border-bottom: 2px solid #409eff;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 页面头部 -->
+        <div class="demo-header">
+            <h1>🛡️ RBAC权限管理系统 - 实际功能演示</h1>
+            <p>基于Vue 3 + Element Plus的真实功能展示</p>
+        </div>
+
+        <!-- 导航栏 -->
+        <div style="background: white; border-bottom: 1px solid #e4e7ed; padding: 0 20px;">
+            <el-menu mode="horizontal" :default-active="activeTab" @select="handleTabSelect">
+                <el-menu-item index="login">🔐 登录演示</el-menu-item>
+                <el-menu-item index="dashboard">📊 仪表板</el-menu-item>
+                <el-menu-item index="users">👥 用户管理</el-menu-item>
+                <el-menu-item index="roles">🎭 角色管理</el-menu-item>
+                <el-menu-item index="permissions">🔑 权限管理</el-menu-item>
+                <el-menu-item index="profile">👤 个人中心</el-menu-item>
+            </el-menu>
+        </div>
+
+        <!-- 主要内容区域 -->
+        <div class="demo-content">
+            <!-- 登录演示 -->
+            <div v-show="activeTab === 'login'" class="demo-section">
+                <h2 class="section-title">🔐 用户登录演示</h2>
+                <div class="login-demo">
+                    <el-card>
+                        <template #header>
+                            <div style="text-align: center;">
+                                <h3>系统登录</h3>
+                            </div>
+                        </template>
+                        <el-form :model="loginForm" ref="loginFormRef">
+                            <el-form-item>
+                                <el-input 
+                                    v-model="loginForm.username" 
+                                    placeholder="请输入用户名"
+                                    size="large"
+                                    prefix-icon="User">
+                                </el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-input 
+                                    v-model="loginForm.password" 
+                                    type="password" 
+                                    placeholder="请输入密码"
+                                    size="large"
+                                    prefix-icon="Lock"
+                                    show-password>
+                                </el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-checkbox v-model="loginForm.remember">记住登录状态</el-checkbox>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button 
+                                    type="primary" 
+                                    size="large" 
+                                    style="width: 100%"
+                                    :loading="loginLoading"
+                                    @click="handleLogin">
+                                    登录
+                                </el-button>
+                            </el-form-item>
+                        </el-form>
+                        <div style="text-align: center; margin-top: 16px;">
+                            <el-text type="info" size="small">
+                                演示账号：admin/123456 或 user/123456
+                            </el-text>
+                        </div>
+                    </el-card>
+                </div>
+            </div>
+
+            <!-- 仪表板演示 -->
+            <div v-show="activeTab === 'dashboard'" class="demo-section">
+                <h2 class="section-title">📊 仪表板演示</h2>
+                
+                <!-- 统计卡片 -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">{{ dashboardData.userCount }}</div>
+                        <div>用户总数</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ dashboardData.roleCount }}</div>
+                        <div>角色总数</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ dashboardData.permissionCount }}</div>
+                        <div>权限总数</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ dashboardData.onlineCount }}</div>
+                        <div>在线用户</div>
+                    </div>
+                </div>
+
+                <!-- 图表区域 -->
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-card>
+                            <template #header>
+                                <span>用户状态分布</span>
+                            </template>
+                            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center;">
+                                    <el-progress type="circle" :percentage="75" status="success">
+                                        <span>活跃用户</span>
+                                    </el-progress>
+                                    <div style="margin-top: 10px;">75% 用户活跃</div>
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-card>
+                            <template #header>
+                                <span>系统访问趋势</span>
+                            </template>
+                            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 100%;">
+                                    <div v-for="(item, index) in trendData" :key="index" style="margin-bottom: 10px;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                            <span>{{ item.date }}</span>
+                                            <span>{{ item.count }}</span>
+                                        </div>
+                                        <el-progress :percentage="item.percentage" :show-text="false"></el-progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
+
+            <!-- 用户管理演示 -->
+            <div v-show="activeTab === 'users'" class="demo-section">
+                <h2 class="section-title">👥 用户管理演示</h2>
+                
+                <!-- 操作栏 -->
+                <div style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <el-input 
+                            v-model="userSearch" 
+                            placeholder="搜索用户..." 
+                            style="width: 300px; margin-right: 10px;"
+                            prefix-icon="Search">
+                        </el-input>
+                        <el-button type="primary" @click="handleAddUser">
+                            新增用户
+                        </el-button>
+                    </div>
+                    <div>
+                        <el-button @click="handleBatchDelete" :disabled="selectedUsers.length === 0">
+                            批量删除
+                        </el-button>
+                    </div>
+                </div>
+
+                <!-- 用户表格 -->
+                <el-table 
+                    :data="filteredUsers" 
+                    stripe 
+                    @selection-change="handleSelectionChange"
+                    style="width: 100%">
+                    <el-table-column type="selection" width="55"></el-table-column>
+                    <el-table-column prop="id" label="ID" width="80"></el-table-column>
+                    <el-table-column prop="name" label="姓名" width="120"></el-table-column>
+                    <el-table-column prop="username" label="用户名" width="120"></el-table-column>
+                    <el-table-column prop="email" label="邮箱" width="200"></el-table-column>
+                    <el-table-column prop="roles" label="角色" width="150">
+                        <template #default="{ row }">
+                            <el-tag v-for="role in row.roles" :key="role" size="small" style="margin-right: 5px;">
+                                {{ role }}
+                            </el-tag>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="status" label="状态" width="100">
+                        <template #default="{ row }">
+                            <el-tag :type="row.status === '启用' ? 'success' : 'danger'" size="small">
+                                {{ row.status }}
+                            </el-tag>
+                        </template>
+                    </el-table-column>
+                    <el-table-column label="操作" width="200">
+                        <template #default="{ row }">
+                            <el-button size="small" @click="handleEditUser(row)">编辑</el-button>
+                            <el-button size="small" type="warning" @click="handleAssignRole(row)">分配角色</el-button>
+                            <el-button size="small" type="danger" @click="handleDeleteUser(row)">删除</el-button>
+                        </template>
+                    </el-table-column>
+                </el-table>
+
+                <!-- 分页 -->
+                <div style="margin-top: 16px; text-align: right;">
+                    <el-pagination
+                        v-model:current-page="userCurrentPage"
+                        v-model:page-size="userPageSize"
+                        :page-sizes="[10, 20, 50, 100]"
+                        :total="users.length"
+                        layout="total, sizes, prev, pager, next, jumper">
+                    </el-pagination>
+                </div>
+            </div>
+
+            <!-- 角色管理演示 -->
+            <div v-show="activeTab === 'roles'" class="demo-section">
+                <h2 class="section-title">🎭 角色管理演示</h2>
+
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-card>
+                            <template #header>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>角色列表</span>
+                                    <el-button size="small" type="primary" @click="handleAddRole">新增角色</el-button>
+                                </div>
+                            </template>
+                            <el-table :data="roles" @row-click="handleRoleSelect" highlight-current-row>
+                                <el-table-column prop="name" label="角色名称"></el-table-column>
+                                <el-table-column prop="userCount" label="用户数" width="80"></el-table-column>
+                                <el-table-column prop="permissionCount" label="权限数" width="80"></el-table-column>
+                                <el-table-column label="操作" width="120">
+                                    <template #default="{ row }">
+                                        <el-button size="small" @click.stop="handleEditRole(row)">编辑</el-button>
+                                        <el-button size="small" type="danger" @click.stop="handleDeleteRole(row)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </el-card>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-card>
+                            <template #header>
+                                <span>权限分配 - {{ selectedRole?.name || '请选择角色' }}</span>
+                            </template>
+                            <div v-if="selectedRole" style="padding: 20px;">
+                                <p>为角色 <strong>{{ selectedRole.name }}</strong> 分配权限：</p>
+                                <el-checkbox-group v-model="selectedPermissions">
+                                    <div v-for="permission in availablePermissions" :key="permission.id" style="margin-bottom: 8px;">
+                                        <el-checkbox :label="permission.id">{{ permission.name }}</el-checkbox>
+                                    </div>
+                                </el-checkbox-group>
+                                <div style="margin-top: 16px;">
+                                    <el-button @click="handleSavePermissions" type="primary">保存权限</el-button>
+                                </div>
+                            </div>
+                            <div v-else style="text-align: center; padding: 40px; color: #909399;">
+                                请从左侧选择一个角色来分配权限
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
+
+            <!-- 权限管理演示 -->
+            <div v-show="activeTab === 'permissions'" class="demo-section">
+                <h2 class="section-title">🔑 权限管理演示</h2>
+
+                <el-row :gutter="20">
+                    <el-col :span="8">
+                        <el-card>
+                            <template #header>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>权限树</span>
+                                    <el-input
+                                        v-model="permissionSearch"
+                                        placeholder="搜索权限..."
+                                        size="small"
+                                        style="width: 150px;">
+                                    </el-input>
+                                </div>
+                            </template>
+                            <div style="max-height: 300px; overflow-y: auto;">
+                                <el-tree
+                                    :data="permissionTree"
+                                    :props="{ children: 'children', label: 'name' }"
+                                    @node-click="handlePermissionSelect">
+                                </el-tree>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <el-col :span="16">
+                        <el-card>
+                            <template #header>
+                                <span>权限详情</span>
+                            </template>
+                            <div v-if="selectedPermission">
+                                <el-descriptions :column="2" border>
+                                    <el-descriptions-item label="权限名称">{{ selectedPermission.name }}</el-descriptions-item>
+                                    <el-descriptions-item label="权限代码">{{ selectedPermission.code }}</el-descriptions-item>
+                                    <el-descriptions-item label="权限类型">{{ selectedPermission.type }}</el-descriptions-item>
+                                    <el-descriptions-item label="权限状态">
+                                        <el-tag :type="selectedPermission.status === '启用' ? 'success' : 'danger'">
+                                            {{ selectedPermission.status }}
+                                        </el-tag>
+                                    </el-descriptions-item>
+                                    <el-descriptions-item label="权限描述" :span="2">{{ selectedPermission.description }}</el-descriptions-item>
+                                </el-descriptions>
+
+                                <div style="margin-top: 20px;">
+                                    <h4>关联角色</h4>
+                                    <div style="margin-top: 10px;">
+                                        <el-tag v-for="role in selectedPermission.relatedRoles" :key="role" style="margin-right: 8px;">
+                                            {{ role }}
+                                        </el-tag>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else style="text-align: center; padding: 40px; color: #909399;">
+                                请从左侧权限树选择一个权限查看详情
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
+
+            <!-- 个人中心演示 -->
+            <div v-show="activeTab === 'profile'" class="demo-section">
+                <h2 class="section-title">👤 个人中心演示</h2>
+
+                <el-row :gutter="20">
+                    <el-col :span="8">
+                        <el-card>
+                            <template #header>
+                                <span>个人信息</span>
+                            </template>
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <div style="width: 80px; height: 80px; margin: 0 auto 10px; background: #409eff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;">
+                                    {{ currentUser.name.charAt(0) }}
+                                </div>
+                                <h3>{{ currentUser.name }}</h3>
+                                <p style="color: #909399;">{{ currentUser.role }}</p>
+                            </div>
+                            <el-descriptions :column="1" border>
+                                <el-descriptions-item label="用户名">{{ currentUser.username }}</el-descriptions-item>
+                                <el-descriptions-item label="邮箱">{{ currentUser.email }}</el-descriptions-item>
+                                <el-descriptions-item label="手机">{{ currentUser.phone }}</el-descriptions-item>
+                                <el-descriptions-item label="部门">{{ currentUser.department }}</el-descriptions-item>
+                                <el-descriptions-item label="最后登录">{{ currentUser.lastLogin }}</el-descriptions-item>
+                            </el-descriptions>
+                        </el-card>
+                    </el-col>
+                    <el-col :span="16">
+                        <el-tabs v-model="profileActiveTab">
+                            <el-tab-pane label="编辑信息" name="edit">
+                                <el-form :model="profileForm" label-width="100px">
+                                    <el-form-item label="姓名">
+                                        <el-input v-model="profileForm.name"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="邮箱">
+                                        <el-input v-model="profileForm.email"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="手机">
+                                        <el-input v-model="profileForm.phone"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="部门">
+                                        <el-select v-model="profileForm.department" style="width: 100%;">
+                                            <el-option label="技术部" value="技术部"></el-option>
+                                            <el-option label="产品部" value="产品部"></el-option>
+                                            <el-option label="运营部" value="运营部"></el-option>
+                                        </el-select>
+                                    </el-form-item>
+                                    <el-form-item>
+                                        <el-button type="primary" @click="handleUpdateProfile">保存修改</el-button>
+                                        <el-button @click="handleResetProfile">重置</el-button>
+                                    </el-form-item>
+                                </el-form>
+                            </el-tab-pane>
+                            <el-tab-pane label="修改密码" name="password">
+                                <el-form :model="passwordForm" label-width="100px">
+                                    <el-form-item label="原密码">
+                                        <el-input v-model="passwordForm.oldPassword" type="password" show-password></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="新密码">
+                                        <el-input v-model="passwordForm.newPassword" type="password" show-password></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="确认密码">
+                                        <el-input v-model="passwordForm.confirmPassword" type="password" show-password></el-input>
+                                    </el-form-item>
+                                    <el-form-item>
+                                        <el-button type="primary" @click="handleChangePassword">修改密码</el-button>
+                                    </el-form-item>
+                                </el-form>
+                            </el-tab-pane>
+                        </el-tabs>
+                    </el-col>
+                </el-row>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.15/dist/vue.global.js"></script>
+    <!-- Element Plus JS -->
+    <script src="https://cdn.jsdelivr.net/npm/element-plus@2.4.4/dist/index.full.js"></script>
+
+    <script>
+        const { createApp } = Vue;
+        const { ElMessage, ElMessageBox } = ElementPlus;
+
+        createApp({
+            data() {
+                return {
+                    activeTab: 'login',
+                    loginLoading: false,
+                    userSearch: '',
+                    selectedUsers: [],
+                    selectedRole: null,
+                    selectedPermission: null,
+                    userCurrentPage: 1,
+                    userPageSize: 10,
+                    profileActiveTab: 'edit',
+                    
+                    loginForm: {
+                        username: '',
+                        password: '',
+                        remember: false
+                    },
+                    
+                    dashboardData: {
+                        userCount: 156,
+                        roleCount: 8,
+                        permissionCount: 45,
+                        onlineCount: 23
+                    },
+                    
+                    trendData: [
+                        { date: '今天', count: 128, percentage: 85 },
+                        { date: '昨天', count: 95, percentage: 63 },
+                        { date: '前天', count: 142, percentage: 95 },
+                        { date: '3天前', count: 76, percentage: 51 }
+                    ],
+                    
+                    users: [
+                        { id: 1, name: '张三', username: 'zhangsan', email: 'zhangsan@example.com', roles: ['管理员'], status: '启用', createTime: '2024-01-15 10:30:00' },
+                        { id: 2, name: '李四', username: 'lisi', email: 'lisi@example.com', roles: ['编辑者'], status: '启用', createTime: '2024-01-16 14:20:00' },
+                        { id: 3, name: '王五', username: 'wangwu', email: 'wangwu@example.com', roles: ['查看者'], status: '禁用', createTime: '2024-01-17 09:15:00' },
+                        { id: 4, name: '赵六', username: 'zhaoliu', email: 'zhaoliu@example.com', roles: ['编辑者', '审核者'], status: '启用', createTime: '2024-01-18 16:45:00' },
+                        { id: 5, name: '钱七', username: 'qianqi', email: 'qianqi@example.com', roles: ['查看者'], status: '启用', createTime: '2024-01-19 11:30:00' }
+                    ],
+
+                    roles: [
+                        { id: 1, name: '系统管理员', userCount: 2, permissionCount: 45, permissions: [1, 2, 3, 4, 5, 6] },
+                        { id: 2, name: '部门经理', userCount: 5, permissionCount: 25, permissions: [1, 2, 3, 5] },
+                        { id: 3, name: '普通用户', userCount: 149, permissionCount: 8, permissions: [1, 5] }
+                    ],
+
+                    availablePermissions: [
+                        { id: 1, name: '查看用户' },
+                        { id: 2, name: '新增用户' },
+                        { id: 3, name: '编辑用户' },
+                        { id: 4, name: '删除用户' },
+                        { id: 5, name: '查看角色' },
+                        { id: 6, name: '分配权限' }
+                    ],
+
+                    permissionTree: [
+                        {
+                            id: 1,
+                            name: '用户管理',
+                            code: 'user',
+                            type: '模块',
+                            status: '启用',
+                            description: '用户信息管理模块',
+                            relatedRoles: ['系统管理员', '部门经理'],
+                            children: [
+                                { id: 2, name: '查看用户', code: 'user:view', type: '操作', status: '启用', description: '查看用户列表和详情', relatedRoles: ['系统管理员', '部门经理', '普通用户'] },
+                                { id: 3, name: '新增用户', code: 'user:create', type: '操作', status: '启用', description: '创建新用户', relatedRoles: ['系统管理员'] },
+                                { id: 4, name: '编辑用户', code: 'user:edit', type: '操作', status: '启用', description: '编辑用户信息', relatedRoles: ['系统管理员', '部门经理'] },
+                                { id: 5, name: '删除用户', code: 'user:delete', type: '操作', status: '启用', description: '删除用户', relatedRoles: ['系统管理员'] }
+                            ]
+                        },
+                        {
+                            id: 6,
+                            name: '角色管理',
+                            code: 'role',
+                            type: '模块',
+                            status: '启用',
+                            description: '角色权限管理模块',
+                            relatedRoles: ['系统管理员'],
+                            children: [
+                                { id: 7, name: '查看角色', code: 'role:view', type: '操作', status: '启用', description: '查看角色列表', relatedRoles: ['系统管理员', '部门经理'] },
+                                { id: 8, name: '分配权限', code: 'role:assign', type: '操作', status: '启用', description: '为角色分配权限', relatedRoles: ['系统管理员'] }
+                            ]
+                        }
+                    ],
+
+                    currentUser: {
+                        name: '张三',
+                        username: 'zhangsan',
+                        email: 'zhangsan@example.com',
+                        phone: '13800138000',
+                        department: '技术部',
+                        role: '系统管理员',
+                        lastLogin: '2024-01-20 09:30:00'
+                    },
+
+                    profileForm: {
+                        name: '张三',
+                        email: 'zhangsan@example.com',
+                        phone: '13800138000',
+                        department: '技术部'
+                    },
+
+                    passwordForm: {
+                        oldPassword: '',
+                        newPassword: '',
+                        confirmPassword: ''
+                    },
+
+                    selectedPermissions: [],
+                    permissionSearch: ''
+                };
+            },
+
+            computed: {
+                filteredUsers() {
+                    if (!this.userSearch) return this.users;
+                    return this.users.filter(user =>
+                        user.name.includes(this.userSearch) ||
+                        user.username.includes(this.userSearch) ||
+                        user.email.includes(this.userSearch)
+                    );
+                }
+            },
+
+            methods: {
+                handleTabSelect(key) {
+                    this.activeTab = key;
+                },
+
+                async handleLogin() {
+                    if (!this.loginForm.username || !this.loginForm.password) {
+                        ElMessage.warning('请输入用户名和密码');
+                        return;
+                    }
+
+                    this.loginLoading = true;
+
+                    setTimeout(() => {
+                        ElMessage.success('登录成功！');
+                        this.activeTab = 'dashboard';
+                        this.loginLoading = false;
+                    }, 1000);
+                },
+
+                handleAddUser() {
+                    ElMessage.info('打开新增用户对话框');
+                },
+
+                handleEditUser(row) {
+                    ElMessage.info(`编辑用户: ${row.name}`);
+                },
+
+                handleDeleteUser(row) {
+                    ElMessageBox.confirm(`确定要删除用户 ${row.name} 吗？`, '确认删除', {
+                        type: 'warning'
+                    }).then(() => {
+                        ElMessage.success('删除成功');
+                    }).catch(() => {
+                        ElMessage.info('已取消删除');
+                    });
+                },
+
+                handleAssignRole(row) {
+                    ElMessage.info(`为用户 ${row.name} 分配角色`);
+                },
+
+                handleBatchDelete() {
+                    if (this.selectedUsers.length === 0) {
+                        ElMessage.warning('请选择要删除的用户');
+                        return;
+                    }
+                    ElMessage.info(`批量删除 ${this.selectedUsers.length} 个用户`);
+                },
+
+                handleSelectionChange(selection) {
+                    this.selectedUsers = selection;
+                },
+
+                handleAddRole() {
+                    ElMessage.info('打开新增角色对话框');
+                },
+
+                handleEditRole(row) {
+                    ElMessage.info(`编辑角色: ${row.name}`);
+                },
+
+                handleDeleteRole(row) {
+                    ElMessage.info(`删除角色: ${row.name}`);
+                },
+
+                handleRoleSelect(row) {
+                    this.selectedRole = row;
+                    this.selectedPermissions = row.permissions || [];
+                },
+
+                handleSavePermissions() {
+                    ElMessage.success('权限保存成功');
+                },
+
+                handlePermissionSelect(data) {
+                    this.selectedPermission = data;
+                },
+
+                handleUpdateProfile() {
+                    ElMessage.success('个人信息更新成功');
+                },
+
+                handleResetProfile() {
+                    Object.assign(this.profileForm, {
+                        name: this.currentUser.name,
+                        email: this.currentUser.email,
+                        phone: this.currentUser.phone,
+                        department: this.currentUser.department
+                    });
+                    ElMessage.info('表单已重置');
+                },
+
+                handleChangePassword() {
+                    if (!this.passwordForm.oldPassword || !this.passwordForm.newPassword) {
+                        ElMessage.warning('请填写完整的密码信息');
+                        return;
+                    }
+                    if (this.passwordForm.newPassword !== this.passwordForm.confirmPassword) {
+                        ElMessage.error('两次输入的密码不一致');
+                        return;
+                    }
+                    ElMessage.success('密码修改成功');
+                    Object.assign(this.passwordForm, {
+                        oldPassword: '',
+                        newPassword: '',
+                        confirmPassword: ''
+                    });
+                }
+            }
+        }).use(ElementPlus).mount('#app');
+    </script>
+</body>
+</html>
