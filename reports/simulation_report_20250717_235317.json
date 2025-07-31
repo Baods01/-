@@ -1,0 +1,139 @@
+{
+  "report_info": {
+    "generated_at": "2025-07-17T23:53:17.334492",
+    "mode": "simulation",
+    "generator_version": "1.0.0"
+  },
+  "test_results": {
+    "start_time": "2025-07-17 23:53:09.831430",
+    "end_time": "2025-07-17 23:53:17.333867",
+    "authentication": {
+      "single_login": {
+        "count": 100,
+        "avg_time": 0.045,
+        "min_time": 0.02,
+        "max_time": 0.12,
+        "median_time": 0.042,
+        "p95_time": 0.08,
+        "p99_time": 0.11
+      },
+      "concurrent_login": {
+        "100_concurrent": {
+          "concurrent_users": 100,
+          "total_time": 2.5,
+          "avg_time_per_request": 0.025,
+          "requests_per_second": 40.0,
+          "error_count": 0,
+          "success_rate": 1.0
+        },
+        "500_concurrent": {
+          "concurrent_users": 500,
+          "total_time": 8.2,
+          "avg_time_per_request": 0.0164,
+          "requests_per_second": 61.0,
+          "error_count": 2,
+          "success_rate": 0.996
+        }
+      }
+    },
+    "permission_query": {
+      "single_query": {
+        "count": 1000,
+        "avg_time": 0.025,
+        "min_time": 0.01,
+        "max_time": 0.08,
+        "median_time": 0.022,
+        "p95_time": 0.045,
+        "p99_time": 0.065
+      },
+      "batch_query": {
+        "batch_10": {
+          "batch_size": 10,
+          "count": 10,
+          "avg_time": 0.15,
+          "avg_time_per_user": 0.015,
+          "min_time": 0.12,
+          "max_time": 0.2
+        },
+        "batch_50": {
+          "batch_size": 50,
+          "count": 10,
+          "avg_time": 0.65,
+          "avg_time_per_user": 0.013,
+          "min_time": 0.58,
+          "max_time": 0.75
+        }
+      }
+    },
+    "data_operations": {
+      "user_crud": {
+        "create": {
+          "count": 500,
+          "avg_time": 0.035,
+          "min_time": 0.02,
+          "max_time": 0.08,
+          "median_time": 0.032
+        },
+        "read": {
+          "count": 500,
+          "avg_time": 0.015,
+          "min_time": 0.008,
+          "max_time": 0.04,
+          "median_time": 0.014
+        },
+        "update": {
+          "count": 500,
+          "avg_time": 0.028,
+          "min_time": 0.015,
+          "max_time": 0.065,
+          "median_time": 0.025
+        }
+      },
+      "batch_operations": {
+        "batch_100": {
+          "batch_size": 100,
+          "total_time": 0.85,
+          "time_per_record": 0.0085,
+          "records_per_second": 117.6
+        },
+        "batch_1000": {
+          "batch_size": 1000,
+          "total_time": 6.2,
+          "time_per_record": 0.0062,
+          "records_per_second": 161.3
+        }
+      }
+    },
+    "stress_test": {
+      "duration_minutes": 5,
+      "concurrent_users": 200,
+      "total_operations": 15000,
+      "successful_operations": 14925,
+      "failed_operations": 75,
+      "avg_response_time": 0.032,
+      "max_response_time": 0.18,
+      "min_response_time": 0.008,
+      "operations_per_second": 50.0,
+      "error_rate": 0.005,
+      "actual_duration_seconds": 300
+    }
+  },
+  "data_generation_stats": {
+    "users_generated": 1000,
+    "roles_generated": 50,
+    "permissions_generated": 200,
+    "user_roles_generated": 4000,
+    "role_permissions_generated": 750,
+    "audit_logs_generated": 10000,
+    "start_time": "2025-07-17 23:53:09.245584",
+    "end_time": "2025-07-17 23:53:09.831430",
+    "errors": []
+  },
+  "summary": {
+    "test_status": "completed (simulation)",
+    "avg_login_time_ms": 45.0,
+    "avg_permission_query_time_ms": 25.0,
+    "operations_per_second": 50.0,
+    "error_rate": 0.005
+  }
+}
