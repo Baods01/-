@@ -1,0 +1,1443 @@
+2025-07-21 21:38:44,285 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 21:38:44,287 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 21:39:51,347 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 21:39:51,347 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 21:43:54,902 - UserService - ERROR - 事务回滚: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('test_user', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 21:43:54,904 - UserService - ERROR - 事务回滚: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('context_user', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 21:47:21,391 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 21:47:21,391 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 21:54:28,057 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 21:54:28,057 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 21:54:59,399 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 21:54:59,399 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 22:04:27,546 - TestUserService - INFO - 业务操作: test_operation - 详情: {'key': 'value'}
+2025-07-21 22:04:27,546 - TestUserService - INFO - 业务操作: simple_operation
+2025-07-21 22:48:46,276 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,277 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,277 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,278 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,278 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,278 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,280 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:48:46,280 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,256 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,258 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,258 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,258 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,259 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,259 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,259 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:49:33,260 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,936 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,937 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 22:50:19,938 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,939 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 22:50:19,939 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,940 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 22:50:19,940 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 22:50:19,941 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,942 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 22:50:19,942 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,943 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:50:19,944 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 22:50:19,944 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,945 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'reason': 'invalid_old_password'}
+2025-07-21 22:50:19,945 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'error': '旧密码验证失败'}
+2025-07-21 22:50:19,946 - UserService - ERROR - 事务回滚: 旧密码验证失败
+2025-07-21 22:50:19,946 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,949 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'existing@example.com', 'status': 'failed', 'error': "BusinessLogicError.__init__() got multiple values for argument 'message'"}
+2025-07-21 22:50:19,949 - UserService - ERROR - 事务回滚: 未知错误: BusinessLogicError.__init__() got multiple values for argument 'message'
+2025-07-21 22:50:19,953 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,955 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'existinguser', 'email': 'test@example.com', 'status': 'failed', 'error': "BusinessLogicError.__init__() got multiple values for argument 'message'"}
+2025-07-21 22:50:19,956 - UserService - ERROR - 事务回滚: 未知错误: BusinessLogicError.__init__() got multiple values for argument 'message'
+2025-07-21 22:50:19,971 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,979 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 22:50:19,980 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 22:50:19,980 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,982 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'test@example.com', 'status': 'failed', 'error': '密码强度不足: 密码太弱'}
+2025-07-21 22:50:19,982 - UserService - ERROR - 事务回滚: 密码强度不足: 密码太弱
+2025-07-21 22:50:19,983 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,983 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,984 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:50:19,984 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 22:50:19,985 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,986 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:50:19,986 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 22:50:19,987 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:50:19,988 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 22:51:03,613 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,615 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 22:51:03,616 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,616 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 22:51:03,617 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,618 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 22:51:03,618 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 22:51:03,619 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,621 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 22:51:03,622 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,623 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:51:03,623 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 22:51:03,624 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,625 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'reason': 'invalid_old_password'}
+2025-07-21 22:51:03,625 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'error': '旧密码验证失败'}
+2025-07-21 22:51:03,625 - UserService - ERROR - 事务回滚: 旧密码验证失败
+2025-07-21 22:51:03,626 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,628 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'existing@example.com', 'status': 'failed', 'error': "邮箱地址 'existing@example.com' 已存在"}
+2025-07-21 22:51:03,628 - UserService - ERROR - 事务回滚: 邮箱地址 'existing@example.com' 已存在
+2025-07-21 22:51:03,629 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,630 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'existinguser', 'email': 'test@example.com', 'status': 'failed', 'error': "用户名 'existinguser' 已存在"}
+2025-07-21 22:51:03,630 - UserService - ERROR - 事务回滚: 用户名 'existinguser' 已存在
+2025-07-21 22:51:03,648 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,656 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 22:51:03,656 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 22:51:03,657 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,659 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'test@example.com', 'status': 'failed', 'error': '密码强度不足: 密码太弱'}
+2025-07-21 22:51:03,659 - UserService - ERROR - 事务回滚: 密码强度不足: 密码太弱
+2025-07-21 22:51:03,659 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,660 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,661 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:51:03,661 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 22:51:03,662 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,663 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:51:03,663 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 22:51:03,664 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:51:03,665 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 22:53:26,737 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:54:22,960 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:57:39,458 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:57:39,465 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 22:57:39,465 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 22:57:39,467 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 22:57:39,467 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 22:57:39,467 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 22:57:39,467 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 22:57:39,469 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 22:57:39,469 - UserService - INFO - 业务操作: update_user - 详情: {'user_id': 1, 'updated_fields': ['full_name'], 'status': 'success'}
+2025-07-21 22:57:39,469 - UserService - INFO - 用户信息更新成功: user_id=1, fields=['full_name']
+2025-07-21 22:57:39,471 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:57:39,471 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 22:57:39,472 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 22:57:39,473 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:57:39,473 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 22:57:39,474 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:57:39,474 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 22:57:39,494 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user0', 'email': 'user0@example.com', 'status': 'success'}
+2025-07-21 22:57:39,494 - UserService - INFO - 用户创建成功: username=user0, email=user0@example.com, user_id=1
+2025-07-21 22:57:39,495 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user1', 'email': 'user1@example.com', 'status': 'success'}
+2025-07-21 22:57:39,495 - UserService - INFO - 用户创建成功: username=user1, email=user1@example.com, user_id=1
+2025-07-21 22:57:39,495 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user2', 'email': 'user2@example.com', 'status': 'success'}
+2025-07-21 22:57:39,495 - UserService - INFO - 用户创建成功: username=user2, email=user2@example.com, user_id=1
+2025-07-21 22:57:39,496 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user3', 'email': 'user3@example.com', 'status': 'success'}
+2025-07-21 22:57:39,496 - UserService - INFO - 用户创建成功: username=user3, email=user3@example.com, user_id=1
+2025-07-21 22:57:39,496 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user4', 'email': 'user4@example.com', 'status': 'success'}
+2025-07-21 22:57:39,496 - UserService - INFO - 用户创建成功: username=user4, email=user4@example.com, user_id=1
+2025-07-21 22:57:39,496 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user5', 'email': 'user5@example.com', 'status': 'success'}
+2025-07-21 22:57:39,496 - UserService - INFO - 用户创建成功: username=user5, email=user5@example.com, user_id=1
+2025-07-21 22:57:39,497 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user6', 'email': 'user6@example.com', 'status': 'success'}
+2025-07-21 22:57:39,497 - UserService - INFO - 用户创建成功: username=user6, email=user6@example.com, user_id=1
+2025-07-21 22:57:39,497 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user7', 'email': 'user7@example.com', 'status': 'success'}
+2025-07-21 22:57:39,497 - UserService - INFO - 用户创建成功: username=user7, email=user7@example.com, user_id=1
+2025-07-21 22:57:39,497 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user8', 'email': 'user8@example.com', 'status': 'success'}
+2025-07-21 22:57:39,497 - UserService - INFO - 用户创建成功: username=user8, email=user8@example.com, user_id=1
+2025-07-21 22:57:39,497 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user9', 'email': 'user9@example.com', 'status': 'success'}
+2025-07-21 22:57:39,497 - UserService - INFO - 用户创建成功: username=user9, email=user9@example.com, user_id=1
+2025-07-21 22:57:39,497 - UserService - INFO - 业务操作: batch_create_users - 详情: {'total_count': 10, 'success_count': 10, 'status': 'success'}
+2025-07-21 22:57:39,497 - UserService - INFO - 批量创建用户成功: 总数=10, 成功=10
+2025-07-21 22:59:46,014 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:46,016 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 22:59:46,016 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 22:59:46,017 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 22:59:46,017 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 22:59:46,018 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 22:59:46,018 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 22:59:46,019 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 22:59:46,019 - UserService - INFO - 业务操作: update_user - 详情: {'user_id': 1, 'updated_fields': ['full_name'], 'status': 'success'}
+2025-07-21 22:59:46,019 - UserService - INFO - 用户信息更新成功: user_id=1, fields=['full_name']
+2025-07-21 22:59:46,020 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:46,020 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 22:59:46,021 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 22:59:46,022 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:46,022 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 22:59:46,022 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:46,022 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 22:59:46,049 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user0', 'email': 'user0@example.com', 'status': 'success'}
+2025-07-21 22:59:46,049 - UserService - INFO - 用户创建成功: username=user0, email=user0@example.com, user_id=1
+2025-07-21 22:59:46,049 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user1', 'email': 'user1@example.com', 'status': 'success'}
+2025-07-21 22:59:46,050 - UserService - INFO - 用户创建成功: username=user1, email=user1@example.com, user_id=1
+2025-07-21 22:59:46,050 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user2', 'email': 'user2@example.com', 'status': 'success'}
+2025-07-21 22:59:46,050 - UserService - INFO - 用户创建成功: username=user2, email=user2@example.com, user_id=1
+2025-07-21 22:59:46,050 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user3', 'email': 'user3@example.com', 'status': 'success'}
+2025-07-21 22:59:46,050 - UserService - INFO - 用户创建成功: username=user3, email=user3@example.com, user_id=1
+2025-07-21 22:59:46,051 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user4', 'email': 'user4@example.com', 'status': 'success'}
+2025-07-21 22:59:46,051 - UserService - INFO - 用户创建成功: username=user4, email=user4@example.com, user_id=1
+2025-07-21 22:59:46,051 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user5', 'email': 'user5@example.com', 'status': 'success'}
+2025-07-21 22:59:46,051 - UserService - INFO - 用户创建成功: username=user5, email=user5@example.com, user_id=1
+2025-07-21 22:59:46,051 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user6', 'email': 'user6@example.com', 'status': 'success'}
+2025-07-21 22:59:46,052 - UserService - INFO - 用户创建成功: username=user6, email=user6@example.com, user_id=1
+2025-07-21 22:59:46,052 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user7', 'email': 'user7@example.com', 'status': 'success'}
+2025-07-21 22:59:46,052 - UserService - INFO - 用户创建成功: username=user7, email=user7@example.com, user_id=1
+2025-07-21 22:59:46,052 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user8', 'email': 'user8@example.com', 'status': 'success'}
+2025-07-21 22:59:46,052 - UserService - INFO - 用户创建成功: username=user8, email=user8@example.com, user_id=1
+2025-07-21 22:59:46,052 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user9', 'email': 'user9@example.com', 'status': 'success'}
+2025-07-21 22:59:46,052 - UserService - INFO - 用户创建成功: username=user9, email=user9@example.com, user_id=1
+2025-07-21 22:59:46,053 - UserService - INFO - 业务操作: batch_create_users - 详情: {'total_count': 10, 'success_count': 10, 'status': 'success'}
+2025-07-21 22:59:46,053 - UserService - INFO - 批量创建用户成功: 总数=10, 成功=10
+2025-07-21 22:59:58,207 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,209 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 22:59:58,210 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,210 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 22:59:58,211 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,212 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 22:59:58,212 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 22:59:58,213 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,214 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 22:59:58,214 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,216 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:58,216 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 22:59:58,217 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,219 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'reason': 'invalid_old_password'}
+2025-07-21 22:59:58,219 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'error': '旧密码验证失败'}
+2025-07-21 22:59:58,219 - UserService - ERROR - 事务回滚: 旧密码验证失败
+2025-07-21 22:59:58,220 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,222 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'existing@example.com', 'status': 'failed', 'error': "邮箱地址 'existing@example.com' 已存在"}
+2025-07-21 22:59:58,223 - UserService - ERROR - 事务回滚: 邮箱地址 'existing@example.com' 已存在
+2025-07-21 22:59:58,223 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,224 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'existinguser', 'email': 'test@example.com', 'status': 'failed', 'error': "用户名 'existinguser' 已存在"}
+2025-07-21 22:59:58,225 - UserService - ERROR - 事务回滚: 用户名 'existinguser' 已存在
+2025-07-21 22:59:58,241 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,250 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 22:59:58,250 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 22:59:58,251 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,252 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'test@example.com', 'status': 'failed', 'error': '密码强度不足: 密码太弱'}
+2025-07-21 22:59:58,252 - UserService - ERROR - 事务回滚: 密码强度不足: 密码太弱
+2025-07-21 22:59:58,253 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,253 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,254 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:58,254 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 22:59:58,255 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,257 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 22:59:58,257 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 22:59:58,257 - UserService - INFO - UserService 初始化完成
+2025-07-21 22:59:58,259 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:05:19,965 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,966 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 23:05:19,968 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,969 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 23:05:19,969 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,970 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 23:05:19,970 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 23:05:19,971 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,972 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 23:05:19,973 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,973 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:19,973 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 23:05:19,974 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,976 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'reason': 'invalid_old_password'}
+2025-07-21 23:05:19,976 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'failed', 'error': '旧密码验证失败'}
+2025-07-21 23:05:19,976 - UserService - ERROR - 事务回滚: 旧密码验证失败
+2025-07-21 23:05:19,977 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,979 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'existing@example.com', 'status': 'failed', 'error': "邮箱地址 'existing@example.com' 已存在"}
+2025-07-21 23:05:19,979 - UserService - ERROR - 事务回滚: 邮箱地址 'existing@example.com' 已存在
+2025-07-21 23:05:19,980 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:19,981 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'existinguser', 'email': 'test@example.com', 'status': 'failed', 'error': "用户名 'existinguser' 已存在"}
+2025-07-21 23:05:19,981 - UserService - ERROR - 事务回滚: 用户名 'existinguser' 已存在
+2025-07-21 23:05:19,998 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,005 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 23:05:20,006 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 23:05:20,006 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,007 - UserService - INFO - 业务操作: create_user - 详情: {'username': 'testuser', 'email': 'test@example.com', 'status': 'failed', 'error': '密码强度不足: 密码太弱'}
+2025-07-21 23:05:20,007 - UserService - ERROR - 事务回滚: 密码强度不足: 密码太弱
+2025-07-21 23:05:20,009 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,010 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,011 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:20,011 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 23:05:20,011 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,013 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:20,013 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 23:05:20,013 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:20,014 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:05:34,916 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:05:34,919 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'testuser', 'email': 'test@example.com', 'status': 'success'}
+2025-07-21 23:05:34,919 - UserService - INFO - 用户创建成功: username=testuser, email=test@example.com, user_id=1
+2025-07-21 23:05:34,920 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'success'}
+2025-07-21 23:05:34,920 - UserService - INFO - 用户认证成功: user_id=1, username=testuser
+2025-07-21 23:05:34,920 - UserService - INFO - 业务操作: authenticate_user - 详情: {'username': 'nonexistent', 'status': 'failed', 'reason': 'user_not_found'}
+2025-07-21 23:05:34,920 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'user_inactive'}
+2025-07-21 23:05:34,921 - UserService - INFO - 业务操作: authenticate_user - 详情: {'user_id': 1, 'username': 'testuser', 'status': 'failed', 'reason': 'invalid_password'}
+2025-07-21 23:05:34,921 - UserService - INFO - 业务操作: update_user - 详情: {'user_id': 1, 'updated_fields': ['full_name'], 'status': 'success'}
+2025-07-21 23:05:34,922 - UserService - INFO - 用户信息更新成功: user_id=1, fields=['full_name']
+2025-07-21 23:05:34,922 - UserService - INFO - 业务操作: change_password - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:34,923 - UserService - INFO - 用户密码修改成功: user_id=1
+2025-07-21 23:05:34,923 - UserService - INFO - 业务操作: get_user_permissions - 详情: {'user_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:05:34,923 - UserService - INFO - 业务操作: enable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:34,924 - UserService - INFO - 用户启用成功: user_id=1
+2025-07-21 23:05:34,924 - UserService - INFO - 业务操作: disable_user - 详情: {'user_id': 1, 'status': 'success'}
+2025-07-21 23:05:34,924 - UserService - INFO - 用户禁用成功: user_id=1
+2025-07-21 23:05:34,949 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user0', 'email': 'user0@example.com', 'status': 'success'}
+2025-07-21 23:05:34,949 - UserService - INFO - 用户创建成功: username=user0, email=user0@example.com, user_id=1
+2025-07-21 23:05:34,949 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user1', 'email': 'user1@example.com', 'status': 'success'}
+2025-07-21 23:05:34,949 - UserService - INFO - 用户创建成功: username=user1, email=user1@example.com, user_id=1
+2025-07-21 23:05:34,951 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user2', 'email': 'user2@example.com', 'status': 'success'}
+2025-07-21 23:05:34,951 - UserService - INFO - 用户创建成功: username=user2, email=user2@example.com, user_id=1
+2025-07-21 23:05:34,951 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user3', 'email': 'user3@example.com', 'status': 'success'}
+2025-07-21 23:05:34,951 - UserService - INFO - 用户创建成功: username=user3, email=user3@example.com, user_id=1
+2025-07-21 23:05:34,951 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user4', 'email': 'user4@example.com', 'status': 'success'}
+2025-07-21 23:05:34,952 - UserService - INFO - 用户创建成功: username=user4, email=user4@example.com, user_id=1
+2025-07-21 23:05:34,952 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user5', 'email': 'user5@example.com', 'status': 'success'}
+2025-07-21 23:05:34,952 - UserService - INFO - 用户创建成功: username=user5, email=user5@example.com, user_id=1
+2025-07-21 23:05:34,952 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user6', 'email': 'user6@example.com', 'status': 'success'}
+2025-07-21 23:05:34,952 - UserService - INFO - 用户创建成功: username=user6, email=user6@example.com, user_id=1
+2025-07-21 23:05:34,953 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user7', 'email': 'user7@example.com', 'status': 'success'}
+2025-07-21 23:05:34,953 - UserService - INFO - 用户创建成功: username=user7, email=user7@example.com, user_id=1
+2025-07-21 23:05:34,953 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user8', 'email': 'user8@example.com', 'status': 'success'}
+2025-07-21 23:05:34,953 - UserService - INFO - 用户创建成功: username=user8, email=user8@example.com, user_id=1
+2025-07-21 23:05:34,953 - UserService - INFO - 业务操作: create_user - 详情: {'user_id': 1, 'username': 'user9', 'email': 'user9@example.com', 'status': 'success'}
+2025-07-21 23:05:34,953 - UserService - INFO - 用户创建成功: username=user9, email=user9@example.com, user_id=1
+2025-07-21 23:05:34,953 - UserService - INFO - 业务操作: batch_create_users - 详情: {'total_count': 10, 'success_count': 10, 'status': 'success'}
+2025-07-21 23:05:34,953 - UserService - INFO - 批量创建用户成功: 总数=10, 成功=10
+2025-07-21 23:14:39,615 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,616 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,616 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,616 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,617 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,618 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,618 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:14:39,619 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,051 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,051 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,052 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,052 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,052 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,052 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,052 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:27,053 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,025 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,027 - RoleService - INFO - 业务操作: assign_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2, 3], 'success_count': 3, 'failed_count': 0, 'failed_permissions': [], 'granted_by': None, 'status': 'success'}
+2025-07-21 23:15:44,027 - RoleService - INFO - 权限分配成功: role_id=1, success_count=3
+2025-07-21 23:15:44,028 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,029 - RoleService - INFO - 业务操作: assign_users - 详情: {'role_id': 1, 'user_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_users': [], 'assigned_by': None, 'status': 'success'}
+2025-07-21 23:15:44,030 - RoleService - INFO - 用户分配成功: role_id=1, success_count=2
+2025-07-21 23:15:44,031 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,032 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色代码 'admin' 已存在"}
+2025-07-21 23:15:44,032 - RoleService - ERROR - 事务回滚: 角色代码 'admin' 已存在
+2025-07-21 23:15:44,033 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,034 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色名称 '管理员' 已存在"}
+2025-07-21 23:15:44,035 - RoleService - ERROR - 事务回滚: 角色名称 '管理员' 已存在
+2025-07-21 23:15:44,036 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,037 - RoleService - INFO - 业务操作: create_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'status': 'success'}
+2025-07-21 23:15:44,037 - RoleService - INFO - 角色创建成功: role_name=管理员, role_code=admin, role_id=1
+2025-07-21 23:15:44,039 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,040 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,042 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:15:44,042 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:15:44,045 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,060 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:15:44,060 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:15:44,061 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,063 - RoleService - INFO - 业务操作: get_role_permissions - 详情: {'role_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:15:44,064 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,065 - RoleService - INFO - 业务操作: get_role_statistics - 详情: {'stats': {'total_roles': 5, 'active_roles': 5, 'inactive_roles': 5, 'timestamp': '2025-07-21T15:15:44.065817+00:00'}, 'status': 'success'}
+2025-07-21 23:15:44,066 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,067 - RoleService - INFO - 业务操作: get_role_users - 详情: {'role_id': 1, 'page': 1, 'size': 10, 'total': 2, 'status': 'success'}
+2025-07-21 23:15:44,068 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,070 - RoleService - INFO - 业务操作: revoke_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_permissions': [], 'status': 'success'}
+2025-07-21 23:15:44,070 - RoleService - INFO - 权限撤销完成: role_id=1, success_count=2
+2025-07-21 23:15:44,071 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,072 - RoleService - INFO - 业务操作: search_roles - 详情: {'keyword': '管理', 'limit': 10, 'offset': 0, 'result_count': 2, 'status': 'success'}
+2025-07-21 23:15:44,073 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:15:44,075 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:15:44,075 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:16:02,668 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:21:20,815 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:21:20,816 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:21:20,816 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:21:20,816 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:21:20,818 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:21:20,818 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:21:20,818 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:21:20,824 - RoleService - INFO - 业务操作: batch_create_roles - 详情: {'total_count': 2, 'success_count': 2, 'status': 'success'}
+2025-07-21 23:21:20,824 - RoleService - INFO - 批量创建角色成功: 总数=2, 成功=2
+2025-07-21 23:21:20,824 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 2, 'success_count': 2, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:21:20,824 - RoleService - INFO - 批量分配权限完成: 总数=2, 成功=2, 失败=0
+2025-07-21 23:21:20,825 - RoleService - INFO - 角色级联删除完成: role_id=1, 删除权限关联=2, 删除用户关联=2
+2025-07-21 23:21:20,826 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 10, 'success_count': 10, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:21:20,826 - RoleService - INFO - 批量分配权限完成: 总数=10, 成功=10, 失败=0
+2025-07-21 23:21:20,828 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 999, 'status': 'failed', 'error': 'Role not found (ID: 999)'}
+2025-07-21 23:21:20,828 - RoleService - ERROR - 事务回滚: Role not found (ID: 999)
+2025-07-21 23:24:39,216 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:24:39,217 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色名称 '管理员' 已存在"}
+2025-07-21 23:24:39,218 - RoleService - ERROR - 事务回滚: 角色名称 '管理员' 已存在
+2025-07-21 23:24:39,218 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:24:39,218 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:24:39,219 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:24:39,219 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:24:39,220 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:24:39,220 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:24:39,226 - RoleService - INFO - 业务操作: batch_create_roles - 详情: {'total_count': 2, 'success_count': 2, 'status': 'success'}
+2025-07-21 23:24:39,226 - RoleService - INFO - 批量创建角色成功: 总数=2, 成功=2
+2025-07-21 23:24:39,227 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 2, 'success_count': 2, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:24:39,227 - RoleService - INFO - 批量分配权限完成: 总数=2, 成功=2, 失败=0
+2025-07-21 23:24:39,227 - RoleService - INFO - 角色级联删除完成: role_id=1, 删除权限关联=2, 删除用户关联=2
+2025-07-21 23:24:39,228 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 10, 'success_count': 10, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:24:39,228 - RoleService - INFO - 批量分配权限完成: 总数=10, 成功=10, 失败=0
+2025-07-21 23:24:39,230 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 999, 'status': 'failed', 'error': 'Role not found (ID: 999)'}
+2025-07-21 23:24:39,230 - RoleService - ERROR - 事务回滚: Role not found (ID: 999)
+2025-07-21 23:26:52,670 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:26:52,671 - RoleService - INFO - 业务操作: create_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'status': 'success'}
+2025-07-21 23:26:52,671 - RoleService - INFO - 角色创建成功: role_name=管理员, role_code=admin, role_id=1
+2025-07-21 23:26:52,672 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色名称 '管理员' 已存在"}
+2025-07-21 23:26:52,672 - RoleService - ERROR - 事务回滚: 角色名称 '管理员' 已存在
+2025-07-21 23:26:52,672 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色代码 'admin' 已存在"}
+2025-07-21 23:26:52,673 - RoleService - ERROR - 事务回滚: 角色代码 'admin' 已存在
+2025-07-21 23:26:52,673 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:26:52,673 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:26:52,675 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:26:52,675 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:26:52,676 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:26:52,676 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:26:52,677 - RoleService - INFO - 业务操作: assign_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2, 3], 'success_count': 3, 'failed_count': 0, 'failed_permissions': [], 'granted_by': None, 'status': 'success'}
+2025-07-21 23:26:52,677 - RoleService - INFO - 权限分配成功: role_id=1, success_count=3
+2025-07-21 23:26:52,678 - RoleService - INFO - 业务操作: revoke_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_permissions': [], 'status': 'success'}
+2025-07-21 23:26:52,678 - RoleService - INFO - 权限撤销完成: role_id=1, success_count=2
+2025-07-21 23:26:52,679 - RoleService - INFO - 业务操作: get_role_users - 详情: {'role_id': 1, 'page': 1, 'size': 10, 'total': 2, 'status': 'success'}
+2025-07-21 23:26:52,681 - RoleService - INFO - 业务操作: get_role_permissions - 详情: {'role_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:26:52,685 - RoleService - INFO - 业务操作: batch_create_roles - 详情: {'total_count': 2, 'success_count': 2, 'status': 'success'}
+2025-07-21 23:26:52,685 - RoleService - INFO - 批量创建角色成功: 总数=2, 成功=2
+2025-07-21 23:26:52,685 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 2, 'success_count': 2, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:26:52,685 - RoleService - INFO - 批量分配权限完成: 总数=2, 成功=2, 失败=0
+2025-07-21 23:26:52,686 - RoleService - INFO - 角色级联删除完成: role_id=1, 删除权限关联=2, 删除用户关联=2
+2025-07-21 23:26:52,687 - RoleService - INFO - 业务操作: batch_assign_permissions - 详情: {'total_assignments': 10, 'success_count': 10, 'failed_count': 0, 'status': 'success'}
+2025-07-21 23:26:52,687 - RoleService - INFO - 批量分配权限完成: 总数=10, 成功=10, 失败=0
+2025-07-21 23:26:52,689 - RoleService - INFO - 业务操作: get_role_users - 详情: {'role_id': 1, 'page': 1, 'size': 50, 'total': 100, 'status': 'success'}
+2025-07-21 23:26:52,689 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 999, 'status': 'failed', 'error': 'Role not found (ID: 999)'}
+2025-07-21 23:26:52,689 - RoleService - ERROR - 事务回滚: Role not found (ID: 999)
+2025-07-21 23:27:04,572 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,575 - RoleService - INFO - 业务操作: assign_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2, 3], 'success_count': 3, 'failed_count': 0, 'failed_permissions': [], 'granted_by': None, 'status': 'success'}
+2025-07-21 23:27:04,575 - RoleService - INFO - 权限分配成功: role_id=1, success_count=3
+2025-07-21 23:27:04,576 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,577 - RoleService - INFO - 业务操作: assign_users - 详情: {'role_id': 1, 'user_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_users': [], 'assigned_by': None, 'status': 'success'}
+2025-07-21 23:27:04,577 - RoleService - INFO - 用户分配成功: role_id=1, success_count=2
+2025-07-21 23:27:04,578 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,579 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色代码 'admin' 已存在"}
+2025-07-21 23:27:04,579 - RoleService - ERROR - 事务回滚: 角色代码 'admin' 已存在
+2025-07-21 23:27:04,580 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,581 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色名称 '管理员' 已存在"}
+2025-07-21 23:27:04,581 - RoleService - ERROR - 事务回滚: 角色名称 '管理员' 已存在
+2025-07-21 23:27:04,583 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,584 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色代码 'admin' 已存在"}
+2025-07-21 23:27:04,584 - RoleService - ERROR - 事务回滚: 角色代码 'admin' 已存在
+2025-07-21 23:27:04,588 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,590 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,592 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:27:04,592 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:27:04,608 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,609 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:27:04,609 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:27:04,610 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,611 - RoleService - INFO - 业务操作: get_role_permissions - 详情: {'role_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:27:04,613 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,614 - RoleService - INFO - 业务操作: get_role_statistics - 详情: {'stats': {'total_roles': 5, 'active_roles': 5, 'inactive_roles': 5, 'timestamp': '2025-07-21T15:27:04.614826+00:00'}, 'status': 'success'}
+2025-07-21 23:27:04,615 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,616 - RoleService - INFO - 业务操作: get_role_users - 详情: {'role_id': 1, 'page': 1, 'size': 10, 'total': 2, 'status': 'success'}
+2025-07-21 23:27:04,617 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,619 - RoleService - INFO - 业务操作: revoke_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_permissions': [], 'status': 'success'}
+2025-07-21 23:27:04,619 - RoleService - INFO - 权限撤销完成: role_id=1, success_count=2
+2025-07-21 23:27:04,620 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,629 - RoleService - INFO - 业务操作: search_roles - 详情: {'keyword': '管理', 'limit': 10, 'offset': 0, 'result_count': 2, 'status': 'success'}
+2025-07-21 23:27:04,631 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:27:04,632 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:27:04,632 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:29:45,402 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,404 - RoleService - INFO - 业务操作: assign_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2, 3], 'success_count': 3, 'failed_count': 0, 'failed_permissions': [], 'granted_by': None, 'status': 'success'}
+2025-07-21 23:29:45,404 - RoleService - INFO - 权限分配成功: role_id=1, success_count=3
+2025-07-21 23:29:45,406 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,408 - RoleService - INFO - 业务操作: assign_users - 详情: {'role_id': 1, 'user_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_users': [], 'assigned_by': None, 'status': 'success'}
+2025-07-21 23:29:45,408 - RoleService - INFO - 用户分配成功: role_id=1, success_count=2
+2025-07-21 23:29:45,409 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,410 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色代码 'admin' 已存在"}
+2025-07-21 23:29:45,410 - RoleService - ERROR - 事务回滚: 角色代码 'admin' 已存在
+2025-07-21 23:29:45,411 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,412 - RoleService - INFO - 业务操作: create_role - 详情: {'role_name': '管理员', 'role_code': 'admin', 'status': 'failed', 'error': "角色名称 '管理员' 已存在"}
+2025-07-21 23:29:45,413 - RoleService - ERROR - 事务回滚: 角色名称 '管理员' 已存在
+2025-07-21 23:29:45,414 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,415 - RoleService - INFO - 业务操作: create_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'status': 'success'}
+2025-07-21 23:29:45,415 - RoleService - INFO - 角色创建成功: role_name=管理员, role_code=admin, role_id=1
+2025-07-21 23:29:45,416 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,418 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,420 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'role_name': '管理员', 'role_code': 'admin', 'force': False, 'status': 'success'}
+2025-07-21 23:29:45,420 - RoleService - INFO - 角色删除成功: role_id=1, role_name=管理员
+2025-07-21 23:29:45,421 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,437 - RoleService - INFO - 业务操作: delete_role - 详情: {'role_id': 1, 'force': False, 'status': 'failed', 'error': '角色有依赖'}
+2025-07-21 23:29:45,437 - RoleService - ERROR - 事务回滚: 角色有依赖
+2025-07-21 23:29:45,438 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,441 - RoleService - INFO - 业务操作: get_role_permissions - 详情: {'role_id': 1, 'permission_count': 2, 'status': 'success'}
+2025-07-21 23:29:45,441 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,442 - RoleService - INFO - 业务操作: get_role_statistics - 详情: {'stats': {'total_roles': 5, 'active_roles': 5, 'inactive_roles': 5, 'timestamp': '2025-07-21T15:29:45.442684+00:00'}, 'status': 'success'}
+2025-07-21 23:29:45,444 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,445 - RoleService - INFO - 业务操作: get_role_users - 详情: {'role_id': 1, 'page': 1, 'size': 10, 'total': 2, 'status': 'success'}
+2025-07-21 23:29:45,445 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,447 - RoleService - INFO - 业务操作: revoke_permissions - 详情: {'role_id': 1, 'permission_ids': [1, 2], 'success_count': 2, 'failed_count': 0, 'failed_permissions': [], 'status': 'success'}
+2025-07-21 23:29:45,447 - RoleService - INFO - 权限撤销完成: role_id=1, success_count=2
+2025-07-21 23:29:45,448 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,449 - RoleService - INFO - 业务操作: search_roles - 详情: {'keyword': '管理', 'limit': 10, 'offset': 0, 'result_count': 2, 'status': 'success'}
+2025-07-21 23:29:45,451 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:45,452 - RoleService - INFO - 业务操作: update_role - 详情: {'role_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-21 23:29:45,453 - RoleService - INFO - 角色信息更新成功: role_id=1, fields=['description']
+2025-07-21 23:29:54,763 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,763 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,763 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,764 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,764 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,764 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,764 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:29:54,764 - RoleService - INFO - RoleService 初始化完成
+2025-07-21 23:42:33,141 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:42:33,142 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:42:33,143 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:42:33,143 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:43:48,724 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,725 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '查看用户', 'permission_code': 'user:view', 'resource_type': 'user', 'action_type': 'view', 'status': 'failed', 'error': "'_GeneratorContextManager' object does not support the asynchronous context manager protocol"}
+2025-07-21 23:43:48,725 - PermissionService - ERROR - 事务回滚: '_GeneratorContextManager' object does not support the asynchronous context manager protocol
+2025-07-21 23:43:48,726 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:43:48,726 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,726 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:43:48,738 - AuthService - INFO - 业务操作: login - 详情: {'username': 'admin', 'remember_me': True, 'ip_address': '127.0.0.1', 'status': 'failed', 'error': "数据库查询失败: (sqlite3.OperationalError) no such table: users\n[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at \nFROM users \nWHERE users.username = ?\n LIMIT ? OFFSET ?]\n[parameters: ('admin', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-21 23:43:48,739 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,739 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:43:48,739 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,739 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:43:48,741 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,741 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': 'A', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "'_GeneratorContextManager' object does not support the asynchronous context manager protocol"}
+2025-07-21 23:43:48,742 - PermissionService - ERROR - 事务回滚: '_GeneratorContextManager' object does not support the asynchronous context manager protocol
+2025-07-21 23:43:48,742 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'invalid-code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "'_GeneratorContextManager' object does not support the asynchronous context manager protocol"}
+2025-07-21 23:43:48,742 - PermissionService - ERROR - 事务回滚: '_GeneratorContextManager' object does not support the asynchronous context manager protocol
+2025-07-21 23:43:48,742 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'wrong:code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "'_GeneratorContextManager' object does not support the asynchronous context manager protocol"}
+2025-07-21 23:43:48,743 - PermissionService - ERROR - 事务回滚: '_GeneratorContextManager' object does not support the asynchronous context manager protocol
+2025-07-21 23:43:48,743 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,743 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:43:48,743 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:43:48,744 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:45:55,321 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,330 - PermissionService - ERROR - 事务回滚: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('user:view', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,332 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '查看用户', 'permission_code': 'user:view', 'resource_type': 'user', 'action_type': 'view', 'status': 'failed', 'error': "未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions\n[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at \nFROM permissions \nWHERE permissions.permission_code = ?\n LIMIT ? OFFSET ?]\n[parameters: ('user:view', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-21 23:45:55,332 - PermissionService - ERROR - 事务回滚: 未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('user:view', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,333 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:45:55,333 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,333 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:45:55,334 - AuthService - INFO - 业务操作: login - 详情: {'username': 'admin', 'remember_me': True, 'ip_address': '127.0.0.1', 'status': 'failed', 'error': "数据库查询失败: (sqlite3.OperationalError) no such table: users\n[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at \nFROM users \nWHERE users.username = ?\n LIMIT ? OFFSET ?]\n[parameters: ('admin', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-21 23:45:55,335 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,335 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:45:55,335 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,335 - AuthService - INFO - AuthService 初始化完成
+2025-07-21 23:45:55,338 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,338 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-21 23:45:55,338 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': 'A', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限名称长度必须在2-64字符之间'}
+2025-07-21 23:45:55,338 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-21 23:45:55,339 - PermissionService - ERROR - 事务回滚: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('invalid-code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,339 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'invalid-code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions\n[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at \nFROM permissions \nWHERE permissions.permission_code = ?\n LIMIT ? OFFSET ?]\n[parameters: ('invalid-code', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-21 23:45:55,339 - PermissionService - ERROR - 事务回滚: 未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('invalid-code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,340 - PermissionService - ERROR - 事务回滚: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('wrong:code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,340 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'wrong:code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions\n[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at \nFROM permissions \nWHERE permissions.permission_code = ?\n LIMIT ? OFFSET ?]\n[parameters: ('wrong:code', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-21 23:45:55,341 - PermissionService - ERROR - 事务回滚: 未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('wrong:code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-21 23:45:55,341 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,341 - UserService - INFO - UserService 初始化完成
+2025-07-21 23:45:55,341 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-21 23:45:55,341 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:07:06,753 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:07:06,754 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_id': 1, 'permission_name': '查看用户', 'permission_code': 'user:view', 'resource_type': 'user', 'action_type': 'view', 'status': 'success'}
+2025-07-22 00:07:06,754 - PermissionService - INFO - 权限创建成功: name=查看用户, code=user:view, permission_id=1
+2025-07-22 00:07:06,755 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:07:06,755 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': 'A', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限名称长度必须在2-64字符之间'}
+2025-07-22 00:07:06,755 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:07:06,765 - PermissionService - ERROR - 事务回滚: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('invalid-code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:07:06,765 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'invalid-code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions\n[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at \nFROM permissions \nWHERE permissions.permission_code = ?\n LIMIT ? OFFSET ?]\n[parameters: ('invalid-code', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-22 00:07:06,765 - PermissionService - ERROR - 事务回滚: 未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('invalid-code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:07:06,767 - PermissionService - ERROR - 事务回滚: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('wrong:code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:07:06,767 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'wrong:code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': "未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions\n[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at \nFROM permissions \nWHERE permissions.permission_code = ?\n LIMIT ? OFFSET ?]\n[parameters: ('wrong:code', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"}
+2025-07-22 00:07:06,767 - PermissionService - ERROR - 事务回滚: 未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: permissions
+[SQL: SELECT permissions.permission_name AS permissions_permission_name, permissions.permission_code AS permissions_permission_code, permissions.resource_type AS permissions_resource_type, permissions.action_type AS permissions_action_type, permissions.id AS permissions_id, permissions.created_at AS permissions_created_at 
+FROM permissions 
+WHERE permissions.permission_code = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('wrong:code', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:07:06,767 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:07:06,767 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限名称长度必须在2-64字符之间'}
+2025-07-22 00:07:06,768 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:07:06,768 - PermissionService - INFO - 业务操作: update_permission - 详情: {'permission_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-22 00:07:06,768 - PermissionService - INFO - 权限信息更新成功: permission_id=1, fields=['description']
+2025-07-22 00:07:06,769 - PermissionService - INFO - 业务操作: delete_permission - 详情: {'permission_id': 1, 'permission_name': '查看用户', 'permission_code': 'user:view', 'force': False, 'status': 'success'}
+2025-07-22 00:07:06,769 - PermissionService - INFO - 权限删除成功: permission_id=1, name=查看用户
+2025-07-22 00:07:06,770 - PermissionService - ERROR - 事务回滚: 权限有依赖
+2025-07-22 00:07:06,770 - PermissionService - INFO - 业务操作: delete_permission - 详情: {'permission_id': 1, 'force': False, 'status': 'failed', 'error': '权限有依赖'}
+2025-07-22 00:07:06,770 - PermissionService - ERROR - 事务回滚: 权限有依赖
+2025-07-22 00:07:06,770 - PermissionService - INFO - 业务操作: get_permission_tree - 详情: {'resource_type': 'user', 'tree_size': 1, 'total_permissions': 2, 'status': 'success'}
+2025-07-22 00:07:06,770 - PermissionService - INFO - 业务操作: get_permission_tree - 详情: {'resource_type': None, 'tree_size': 2, 'total_permissions': 3, 'status': 'success'}
+2025-07-22 00:07:06,773 - PermissionService - INFO - 业务操作: batch_create_permissions - 详情: {'total_count': 2, 'success_count': 2, 'failed_count': 0, 'status': 'success'}
+2025-07-22 00:07:06,773 - PermissionService - INFO - 批量创建权限完成: 总数=2, 成功=2, 失败=0
+2025-07-22 00:08:59,385 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:08:59,386 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:08:59,386 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:08:59,411 - AuthService - ERROR - 获取用户角色失败: user_id=1, error=数据库查询失败: (sqlite3.OperationalError) no such table: user_roles
+[SQL: SELECT user_roles.user_id AS user_roles_user_id, user_roles.role_id AS user_roles_role_id, user_roles.assigned_at AS user_roles_assigned_at, user_roles.assigned_by AS user_roles_assigned_by, user_roles.status AS user_roles_status, user_roles.created_at AS user_roles_created_at, user_roles.updated_at AS user_roles_updated_at 
+FROM user_roles 
+WHERE user_roles.user_id = ? AND user_roles.status = ? ORDER BY user_roles.assigned_at DESC]
+[parameters: (1, 1)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:08:59,411 - AuthService - ERROR - 获取用户角色失败: user_id=1, error=数据库查询失败: (sqlite3.OperationalError) no such table: user_roles
+[SQL: SELECT user_roles.user_id AS user_roles_user_id, user_roles.role_id AS user_roles_role_id, user_roles.assigned_at AS user_roles_assigned_at, user_roles.assigned_by AS user_roles_assigned_by, user_roles.status AS user_roles_status, user_roles.created_at AS user_roles_created_at, user_roles.updated_at AS user_roles_updated_at 
+FROM user_roles 
+WHERE user_roles.user_id = ? AND user_roles.status = ? ORDER BY user_roles.assigned_at DESC]
+[parameters: (1, 1)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:08:59,413 - AuthService - INFO - 业务操作: login - 详情: {'username': 'testuser', 'remember_me': True, 'ip_address': '127.0.0.1', 'status': 'failed', 'error': "Mock object has no attribute 'nickname'"}
+2025-07-22 00:08:59,417 - AuthService - INFO - 业务操作: refresh_token - 详情: {'status': 'failed', 'error': '刷新令牌无效'}
+2025-07-22 00:08:59,417 - AuthService - WARNING - 登出时令牌无效: token=valid_token...
+2025-07-22 00:08:59,417 - AuthService - WARNING - 登出时令牌无效: token=invalid_token...
+2025-07-22 00:10:41,923 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:10:41,925 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:10:41,925 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:10:41,925 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:10:41,947 - AuthService - ERROR - 权限检查异常: user_id=1, permission=user:view, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,949 - AuthService - ERROR - 权限检查异常: user_id=1, permission=user:delete, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,950 - AuthService - ERROR - 权限检查异常: user_id=1, permission=role:delete, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,951 - AuthService - ERROR - 权限检查异常: user_id=1, permission=permission:delete, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,951 - AuthService - ERROR - 权限检查异常: user_id=1, permission=system:admin, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,954 - AuthService - ERROR - 权限检查异常: user_id=1, permission=user:view, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,955 - AuthService - ERROR - 权限检查异常: user_id=1, permission=admin:system, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,956 - AuthService - ERROR - 权限检查异常: user_id=1, permission=user:view, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,956 - PermissionService - WARNING - 批量创建权限跳过第2个: 创建失败
+2025-07-22 00:10:41,956 - PermissionService - INFO - 业务操作: batch_create_permissions - 详情: {'total_count': 2, 'success_count': 1, 'failed_count': 1, 'status': 'success'}
+2025-07-22 00:10:41,956 - PermissionService - INFO - 批量创建权限完成: 总数=2, 成功=1, 失败=1
+2025-07-22 00:10:41,957 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_0, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,958 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_1, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,958 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_2, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,959 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_3, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,959 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_4, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,960 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_5, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,961 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_6, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,961 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_7, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,962 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_8, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,962 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_9, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,964 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_10, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,964 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_11, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,965 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_12, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,965 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_13, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,966 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_14, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,967 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_15, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,967 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_16, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,968 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_17, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,968 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_18, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,969 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_19, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,969 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_20, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,970 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_21, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,971 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_22, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,971 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_23, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,971 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_24, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,972 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_25, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,972 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_26, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,974 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_27, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,974 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_28, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,975 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_29, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,976 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_30, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,976 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_31, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,977 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_32, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,977 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_33, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,978 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_34, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,979 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_35, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,979 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_36, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,980 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_37, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,980 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_38, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,981 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_39, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,981 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_40, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,982 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_41, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,983 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_42, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,983 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_43, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,984 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_44, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,984 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_45, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,985 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_46, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,986 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_47, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,986 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_48, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,987 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_49, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,988 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_0_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,988 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_1_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,989 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_2_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,989 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_3_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,989 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_4_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,990 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_5_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,991 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_6_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,991 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_7_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,993 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_8_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,993 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_9_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,994 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_10_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,995 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_11_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,995 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_12_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,996 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_13_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,996 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_14_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,997 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_15_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,997 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_16_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,998 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_17_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,999 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_18_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:41,999 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_19_cached, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,000 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_0_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,001 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_1_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,001 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_2_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,002 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_3_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,003 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_4_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,003 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_5_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,004 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_6_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,004 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_7_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,005 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_8_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:10:42,005 - AuthService - ERROR - 权限检查异常: user_id=1, permission=resource:action_9_new, error=未知错误: 数据库查询失败: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.status AS users_status, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-22 00:27:11,767 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:27:11,767 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_id': 1, 'permission_name': '查看用户', 'permission_code': 'user:view', 'resource_type': 'user', 'action_type': 'view', 'status': 'success'}
+2025-07-22 00:27:11,768 - PermissionService - INFO - 权限创建成功: name=查看用户, code=user:view, permission_id=1
+2025-07-22 00:27:11,768 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:27:11,768 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': 'A', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限名称长度必须在2-64字符之间'}
+2025-07-22 00:27:11,768 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:27:11,778 - PermissionService - ERROR - 事务回滚: 权限代码格式错误，期望: test:view，实际: invalid-code
+2025-07-22 00:27:11,778 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'invalid-code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限代码格式错误，期望: test:view，实际: invalid-code'}
+2025-07-22 00:27:11,778 - PermissionService - ERROR - 事务回滚: 权限代码格式错误，期望: test:view，实际: invalid-code
+2025-07-22 00:27:11,780 - PermissionService - ERROR - 事务回滚: 权限代码格式错误，期望: test:view，实际: wrong:code
+2025-07-22 00:27:11,780 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '测试权限', 'permission_code': 'wrong:code', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限代码格式错误，期望: test:view，实际: wrong:code'}
+2025-07-22 00:27:11,780 - PermissionService - ERROR - 事务回滚: 权限代码格式错误，期望: test:view，实际: wrong:code
+2025-07-22 00:27:11,780 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:27:11,780 - PermissionService - INFO - 业务操作: create_permission - 详情: {'permission_name': '', 'permission_code': 'test:view', 'resource_type': 'test', 'action_type': 'view', 'status': 'failed', 'error': '权限名称长度必须在2-64字符之间'}
+2025-07-22 00:27:11,780 - PermissionService - ERROR - 事务回滚: 权限名称长度必须在2-64字符之间
+2025-07-22 00:27:11,780 - PermissionService - INFO - 业务操作: update_permission - 详情: {'permission_id': 1, 'updated_fields': ['description'], 'status': 'success'}
+2025-07-22 00:27:11,781 - PermissionService - INFO - 权限信息更新成功: permission_id=1, fields=['description']
+2025-07-22 00:27:11,782 - PermissionService - INFO - 业务操作: delete_permission - 详情: {'permission_id': 1, 'permission_name': '查看用户', 'permission_code': 'user:view', 'force': False, 'status': 'success'}
+2025-07-22 00:27:11,782 - PermissionService - INFO - 权限删除成功: permission_id=1, name=查看用户
+2025-07-22 00:27:11,782 - PermissionService - ERROR - 事务回滚: 权限有依赖
+2025-07-22 00:27:11,782 - PermissionService - INFO - 业务操作: delete_permission - 详情: {'permission_id': 1, 'force': False, 'status': 'failed', 'error': '权限有依赖'}
+2025-07-22 00:27:11,782 - PermissionService - ERROR - 事务回滚: 权限有依赖
+2025-07-22 00:27:11,783 - PermissionService - INFO - 业务操作: get_permission_tree - 详情: {'resource_type': 'user', 'tree_size': 1, 'total_permissions': 2, 'status': 'success'}
+2025-07-22 00:27:11,783 - PermissionService - INFO - 业务操作: get_permission_tree - 详情: {'resource_type': None, 'tree_size': 2, 'total_permissions': 3, 'status': 'success'}
+2025-07-22 00:27:11,784 - PermissionService - INFO - 业务操作: batch_create_permissions - 详情: {'total_count': 2, 'success_count': 2, 'failed_count': 0, 'status': 'success'}
+2025-07-22 00:27:11,785 - PermissionService - INFO - 批量创建权限完成: 总数=2, 成功=2, 失败=0
+2025-07-22 00:27:22,622 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:27:22,622 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:27:22,624 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:27:22,653 - AuthService - INFO - 业务操作: login - 详情: {'username': 'testuser', 'remember_me': True, 'ip_address': '127.0.0.1', 'status': 'failed', 'error': "Mock object has no attribute 'nickname'"}
+2025-07-22 00:27:22,656 - AuthService - INFO - 业务操作: refresh_token - 详情: {'status': 'failed', 'error': '刷新令牌无效'}
+2025-07-22 00:27:22,657 - AuthService - WARNING - 登出时令牌无效: token=valid_token...
+2025-07-22 00:27:22,657 - AuthService - WARNING - 登出时令牌无效: token=invalid_token...
+2025-07-22 00:27:33,397 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:27:33,398 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:27:33,398 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:27:33,399 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:27:33,435 - PermissionService - WARNING - 批量创建权限跳过第2个: 创建失败
+2025-07-22 00:27:33,435 - PermissionService - INFO - 业务操作: batch_create_permissions - 详情: {'total_count': 2, 'success_count': 1, 'failed_count': 1, 'status': 'success'}
+2025-07-22 00:27:33,435 - PermissionService - INFO - 批量创建权限完成: 总数=2, 成功=1, 失败=1
+2025-07-22 00:27:33,500 - PermissionService - INFO - 业务操作: check_permission - 详情: {'user_id': 2, 'permission_code': 'user:view', 'has_permission': False, 'check_method': 'none', 'status': 'success'}
+2025-07-22 00:44:22,792 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:44:22,793 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:44:22,794 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:44:22,794 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:44:22,795 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:44:22,795 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:45:00,683 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:45:00,685 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:45:00,685 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:45:00,686 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:45:00,686 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:45:00,686 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:51:45,989 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:51:45,990 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:51:45,990 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:51:45,992 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:51:45,992 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:51:45,992 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:54:06,102 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:06,103 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:54:06,103 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:06,103 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:06,103 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:06,103 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:54:08,144 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:08,145 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:54:08,145 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:08,145 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:08,145 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:08,145 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:54:12,235 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:12,236 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:54:12,237 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:12,237 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:54:12,237 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:54:12,237 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:55:27,909 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:27,909 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:55:27,909 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:27,909 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:27,909 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:27,909 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:55:29,950 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:29,950 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:55:29,952 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:29,952 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:29,952 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:29,952 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:55:34,048 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:34,050 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:55:34,051 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:34,051 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:55:34,051 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:55:34,051 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:56:17,186 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:56:17,187 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:56:17,188 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:56:17,188 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:56:17,188 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:56:17,189 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:57:01,675 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:01,676 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:57:01,676 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:01,676 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:01,676 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:01,676 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:57:03,714 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:03,714 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:57:03,714 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:03,715 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:03,715 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:03,715 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:57:07,807 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:07,807 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:57:07,809 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:07,810 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:07,810 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:07,810 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:57:36,441 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:36,442 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:57:36,442 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:36,443 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:57:36,443 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:57:36,443 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:58:06,563 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:06,563 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:58:06,564 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:06,564 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:06,564 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:06,564 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:58:08,601 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:08,601 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:58:08,602 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:08,602 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:08,602 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:08,602 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 00:58:12,700 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:12,701 - RoleService - INFO - RoleService 初始化完成
+2025-07-22 00:58:12,701 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:12,702 - UserService - INFO - UserService 初始化完成
+2025-07-22 00:58:12,702 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 00:58:12,702 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 01:29:11,540 - UserService - INFO - UserService 初始化完成
+2025-07-22 01:29:11,540 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 01:29:11,541 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 01:29:11,544 - UserService - INFO - UserService 初始化完成
+2025-07-22 01:29:11,544 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 01:29:11,544 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 01:29:11,550 - UserService - INFO - UserService 初始化完成
+2025-07-22 01:29:11,551 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 01:29:11,551 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 01:29:11,554 - UserService - INFO - UserService 初始化完成
+2025-07-22 01:29:11,555 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 01:29:11,555 - AuthService - INFO - AuthService 初始化完成
+2025-07-22 01:31:41,232 - UserService - INFO - UserService 初始化完成
+2025-07-22 01:31:41,234 - PermissionService - INFO - PermissionService 初始化完成
+2025-07-22 01:31:41,235 - AuthService - INFO - AuthService 初始化完成
